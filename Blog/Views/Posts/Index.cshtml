@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Blog.Models.Post>
+
+@{
+    ViewData["Title"] = "Blog";
+}
+
+<h1>Blog</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+
+@foreach (var item in Model) {
+    <div class="card">
+  <div class="card-body">
+    <h1 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h1>
+    <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+    <h6>@Html.DisplayFor(modelItem => item.Footer)<br />@Html.DisplayFor(modelItem => item.CreatedAt)</h6>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+    <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+  </div>
+</div>
+}
