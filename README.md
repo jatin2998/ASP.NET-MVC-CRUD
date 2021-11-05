@@ -1,5 +1,5 @@
-# ASP.NET-MVC-CURD
-My First Web Application in ASP.NET MVC with CURD Operation.
+# ASP.NET-MVC-CRUD
+My First Web Application in ASP.NET MVC with CRUD Operation.
 
 ## Prerequirements
 
